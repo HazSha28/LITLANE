@@ -1,66 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us - LitLane</title>
-<link rel="icon" href="/books/logo.png">
-<link rel="stylesheet" href="style.css">
-<style>
-body {
-background-image: url('/books/book2.jpg'); 
-background-repeat:repeat;
- background-attachment:scroll; 
- background: size 100px ; 
-margin: 0;
-font-family: Arial, sans-serif;
-}
-.container {
-padding: 20px;
- background-color: rgba(255, 255, 255, 0.8); /* Adds a white overlay for text readability */
- margin: 50px auto;
-max-width: 800px;
-border-radius: 10px;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
- }
-header {
- text-align: center;
- }
-header h1 {
-font-size: 2.5em;
-color: #333;
- }
-nav a {
-margin: 0 10px;
-text-decoration: none;
-color: #0066cc;
- }
- nav a:hover {
-text-decoration: underline;
- }
- h2, h3 {
-color: #333;
- }
- p {
-color: #555;
-line-height: 1.6;
- }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LitLane - Discover Books</title>
+  <link rel="icon" href="/books/logo.png">
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Styling */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5dc; /* Nude beige background */
+      color: #5a4231; /* Warm brown text color */
+      line-height: 1.6;
+    }
+
+    /* Container */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* Header Section */
+    header {
+      background-color: #bea88a; /* Light nude brown */
+      color: #1a1f33;
+      text-align: center;
+      padding: 20px 0;
+      border-bottom: 2px solid #c2a891;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+    }
+
+    header nav {
+      margin-top: 10px;
+    }
+
+    header nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #181637;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    header nav a:hover {
+      color: #a16846;
+    }
+
+    /* Main Section */
+    h2 {
+      text-align: center;
+      color: #1f2557;
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+
+    .book-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px 0;
+    }
+
+    .book {
+      background-color: #f5ede2; /* Soft beige */
+      border: 1px solid #866242;
+      border-radius: 8px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .book:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    }
+
+    .book img {
+      width: 50%;
+      height: auto;
+      max-height: 300px;
+      object-fit: cover;
+      border-radius: 5px;
+      margin-bottom: 10px;
+    }
+
+    .book h3 {
+      color: #8d6346;
+      font-size: 1.2em;
+      margin-bottom: 10px;
+    }
+
+    .book p {
+      font-size: 0.9em;
+      margin-bottom: 10px;
+    }
+
+    .book a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background-color: #b98e32;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 0.9em;
+    }
+
+    .book a:hover {
+      background-color: #a16846;
+    }
+
+    /* Footer Section */
+    footer {
+      text-align: center;
+      padding: 10px 0;
+      background-color: #e3d5c1;
+      color: #5a4231;
+      margin-top: 20px;
+      border-top: 2px solid #c2a891;
+    }
+
+    footer p {
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
-   <div class="container">
- <header>
-<h1>LitLane</h1>
-<nav>
- <a href="index.html">Home</a>
- <a href="about us.html">About Us</a>
- <a href="login.html">Logout</a>
-</nav>
-</header>
-<h2>About Us</h2>
- <p>Welcome to LitLane, a pathway for endless reading options, your one-stop destination for novels, knowledge books, and much more.</p>
- <h3>Our Purpose</h3>
-<p>Our purpose is to connect book enthusiasts with a world of literary treasures. We aim to create a platform where readers can explore, learn, and get inspired through the power of books.</p>
- </div>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>LitLane</h1>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about us.html">About Us</a>
+        <!-- <a href="login.html">Login</a>
+        <a href="signup.html">Sign-up</a> -->
+      </nav>
+    </header>
+
+    
+    <h2>Browse Books</h2>
+    <div class="book-list">
+    
+      <div class="book">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/91dSMhdIzTL.jpg" alt="To Kill a Mockingbird">
+        <h3>To Kill a Mockingbird</h3>
+        <p>Author: Harper Lee</p>
+        <p>Genre: Fiction</p>
+        <a href="https://www.goodreads.com/book/show/2657.To_Kill_a_Mockingbird" target="_blank">More Info</a>
+      </div>
+
+      <div class="book">
+        <img src="https://m.media-amazon.com/images/I/81eB+7+CkUL.jpg" alt="Atomic Habits">
+        <h3>Atomic Habits</h3>
+        <p>Author: James Clear</p>
+        <p>Genre: Self-Help</p>
+        <a href="https://jamesclear.com/atomic-habits" target="_blank">More Info</a>
+      </div>
+
+    
+      <div class="book">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/81iqZ2HHD-L.jpg" alt="Harry Potter">
+        <h3>Harry Potter</h3>
+        <p>Author: J.K. Rowling</p>
+        <p>Genre: Fantasy</p>
+        <a href="https://www.wizardingworld.com/" target="_blank">More Info</a>
+      </div>
+    </div>
+    <script src="script.js"></script>
+      <footer>
+      <p>&copy; 2024 LitLane. All Rights Reserved.</p>
+    </footer>
+  </div>
 </body>
 </html>
